@@ -1,0 +1,203 @@
+{
+  "basics": {
+    "name": "Juan Bocca",
+    "label": "Frontend Developer",
+    "image": "https://cv.xorian.dev/avatar.webp",
+    "email": "xorian@xorian.dev",
+    "phone": null,
+    "url": "https://xorian.dev",
+    "summary": "As a self-taught Frontend Developer I am curious and constantly learning new things, which has allowed me to make great strides in the industry in a short time. Currently I work mostly with Angular.",
+    "location": {
+      "postalCode": "15900",
+      "city": "Las Piedras",
+      "countryCode": "UY",
+      "region": "Uruguay"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Juan Bocca",
+        "url": "https://www.linkedin.com/in/juan-bocca/"
+      },
+      {
+        "network": "GitHub",
+        "username": "XorianDev",
+        "url": "https://github.com/XorianDev"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Globant",
+      "position": "Frontend Developer",
+      "url": "https://www.globant.com/",
+      "startDate": "2022-05-01",
+      "endDate": null,
+      "summary": "Contribute in the development of Rockwell Automation's first cloud-native application. Technologies: TypeScript, Angular, GraphQL",
+      "highlights": [],
+      "isRemote": true
+    },
+    {
+      "name": "Globant",
+      "position": "Game Quality Analyst",
+      "url": "https://www.globant.com/",
+      "startDate": "2020-09-28", 
+      "endDate": "2022-04-30",
+      "summary": "Supported Warner Bros on quality control for the Hogwarts Legacy game. Taked care of administrative tasks like distribuiting daily builds and hardware asignations. Highlight: volunteer in educational talks for teenagers about game testing as a real job.",
+      "highlights": [],
+      "isRemote": false
+    }
+  ],
+  "volunteer": [{
+    "organization": "",
+    "position": "",
+    "url": "",
+    "startDate": "",
+    "endDate": "",
+    "summary": "",
+    "highlights": []
+  }],
+  "education": [{
+    "institution": "Jóvenes a Programar",
+    "url": "https://jovenesaprogramar.edu.uy/",
+    "area": "Web Development",
+    "startDate": "2020-03-01",
+    "endDate": "2020-11-30"
+  }],
+  "awards": [{
+    "title": "",
+    "date": "",
+    "awarder": "",
+    "summary": ""
+  }],
+  "certificates": [
+    {
+      "name": "Angular: Getting Started",
+      "date": "02/05/2022",
+      "issuer": "Pluralsight",
+      "url": "https://cv.xorian.dev//Angular-Getting-Started.pdf"
+    },{
+      "name": "Angular 6: The Big Picture",
+      "date": "10/04/2022",
+      "issuer": "Pluralsight",
+      "url": "https://cv.xorian.dev//Angular-6-The-Big-Picture.pdf"
+    },{
+      "name": "Checkout Pro",
+      "date": "24/06/2021",
+      "issuer": "Mercado Pago",
+      "url": "https://cv.xorian.dev//Checkout-Pro.pdf"
+    },{
+      "name": "Principles of Game Design",
+      "date": "27/09/2020",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/CAZ88XLRFLTA"
+    },{
+      "name": "Introduction to Game Development",
+      "date": "30/08/2020",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/5XTSTHKJAL76"
+    },{
+      "name": "Master en CSS",
+      "date": "10/03/2020",
+      "issuer": "Udemy",
+      "url": "https://udemy-certificate.s3.amazonaws.com/pdf/UC-f8fd14ea-13f9-4b27-b26a-70945686ff76.pdf"
+    },{
+      "name": "Master en JavaScript",
+      "date": "05/02/2020",
+      "issuer": "Udemy",
+      "url": "https://udemy-certificate.s3.amazonaws.com/pdf/UC-86d61424-4583-46ef-a82b-9e7a4ddaa8d9.pdf"
+    },
+    {
+      "name": "HTML5.1x: HTML5 Coding Essentials and Best Practices",
+      "date": "04/10/2019",
+      "issuer": "edX",
+      "url": "https://courses.edx.org/certificates/fc4f822b8b2d49be8bb23f3c48a8e2b3"
+    },
+    {
+      "name": "HTML5.0x: HTML5 and CSS Fundamentals",
+      "date": "11/04/2019",
+      "issuer": "edX",
+      "url": "https://courses.edx.org/certificates/3b66a771fd7f4a918d17a69154d023cd"
+    }
+  ],
+  "publications": [
+    {
+      "name": "",
+      "publisher": "",
+      "releaseDate": "",
+      "url": "",
+      "summary": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML"
+    },
+    {
+      "name": "CSS"
+    },
+    {
+      "name": "JavaScript"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "name": "Git"
+    },
+    {
+      "name": "Angular"
+    },
+    {
+      "name": "Tailwind"
+    },
+    {
+      "name": "SQL"
+    },
+    {
+      "name": "MySQL"
+    },
+    {
+      "name": "Proactivity"
+    },
+    {
+      "name": "Teamwork"
+    },
+    {
+      "name": "Continuous Learning"
+    },
+    {
+      "name": "Verbal / Written Communication"
+    },
+    {
+      "name": "Adaptability to Change"
+    }
+  ],
+  "languages": [{
+    "language": "English",
+    "fluency": "C1"
+  }],
+  "interests": [{
+    "name": "",
+    "keywords": [
+      ""
+    ]
+  }],
+  "references": [
+    {
+      "name": "",
+      "reference": ""
+    }
+  ],
+  "projects": [
+    {
+      "name": "",
+      "startDate": "",
+      "endDate": "",
+      "description": "",
+      "highlights": [],
+      "url": "",
+      "isActive": null
+    }
+  ]
+}

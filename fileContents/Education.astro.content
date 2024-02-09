@@ -1,0 +1,98 @@
+---
+import Section from '@/components/Section.astro'
+
+import { education, certificates } from '@/cv.json'
+---
+
+<Section title="Education">
+  <ul>
+    {
+      education.map(
+        ({ institution, area, startDate, endDate }) => {
+          const startYear = new Date(startDate).getFullYear();
+          const endYear = endDate !== null ? new Date(endDate).getFullYear() : 'Current';
+          const years = `${startYear} - ${endYear}`;
+          return (
+            <li>
+              <article>
+                <header>
+                  <div>
+                    <h3>{area}</h3>
+                    <h4>{institution}</h4>
+                  </div>
+                  <time>{years}</time>
+                </header>
+              </article>
+            </li>
+          )
+        }
+      )
+    }
+  </ul>
+  <hr>
+  <h2>Certificates</h2>
+  <ul>
+    {
+      certificates.map(
+        ({ name, date, issuer, url }) => {
+          return (
+            <li>
+              <article>
+                <header>
+                <div>
+                  <h3><a href={url} target="_blank">{name}</a></h3>
+                  <h4>{issuer}</h4>  
+                </div>
+                <time datetime={date}>{date}</time>
+                </header>  
+              </article> 
+            </li>
+          )
+        }
+      )
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  hr {
+    border-color: #fff;
+    opacity: .2;
+    width: 70%;
+  }
+
+  h2 {
+    margin-bottom: 8px;
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 1.5rem;
+  }
+
+  article h3, article h3 a {
+    font-weight: 500;
+    color: #111;
+  }
+
+  article h4 {
+    font-weight: 400;
+    color: #222;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+
+  time {
+    color: #555;
+    font-size: 0.85rem;
+  }
+</style>

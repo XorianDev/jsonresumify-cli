@@ -1,0 +1,94 @@
+---
+import Section from '@/components/Section.astro'
+
+import { work } from '@/cv.json'
+---
+
+<Section title="Work Experience">
+  <ul>
+    {
+      work.map(
+        ({ name, startDate, endDate, position, summary, isRemote }) => {
+          const startYear = new Date(startDate).getFullYear();
+          const endYear = endDate !== null ? new Date(endDate).getFullYear() : 'Current';
+          const years = `${startYear} - ${endYear}`;
+          return (
+            <li>
+              <article>
+                <header>
+                  <div>
+                    <div class="row">
+                      <h3>{name}</h3>
+                      {
+                        isRemote && (
+                          <span>Remote</span>
+                        )
+                      }
+                    </div>
+                    
+                    <h4>{position}</h4>
+                  </div>
+                  <time>{years}</time>
+                </header>
+                <footer>
+                  <p>{summary}</p>
+                </footer>
+              </article>
+            </li>
+          )
+        }
+      )
+    }
+  </ul>
+</Section>
+
+<style>
+  .row {
+    display: inline-flex;
+    gap: 6px;
+    height: 1.85rem;
+  }
+
+  .row span {
+    vertical-align: middle;
+    align-self: center;
+    border-radius: 6px;
+    background: #f3f3f3;
+    color: black;
+    font-size: .75rem;
+    font-weight: 500;
+    padding: 0.3rem 0.6rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  article h3 {
+    font-weight: 500;
+    color: #111;
+  }
+
+  article h4 {
+    font-weight: 400;
+    color: #222;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+
+  time {
+    color: #555;
+    font-size: 0.85rem;
+  }
+
+  p {
+    font-size: .77rem;
+  }
+</style>
