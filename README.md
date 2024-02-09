@@ -12,8 +12,8 @@ You will just take care of a single .json file, let json-resumify do the rest.
 ## How to use
 
 ### Create the template
-1) Execute **npm install json-resumify**.
-2) Execute **npm run json-resumify**.
+1) Execute **npm install -g json-resumify** (*Since its a CLI, you need to install it globally*).
+2) Execute **json-resumify**.
 3) Type a name for the project's directory (*default json-resumify*).
 \
 And that's it, the template for your resume was created!

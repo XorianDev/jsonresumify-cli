@@ -2,6 +2,8 @@
 
 import { execSync } from 'child_process';
 import fs from 'fs';
+import { fileURLToPath } from 'url';
+import { readFileSync } from 'fs';
 import path from 'path';
 import readline from 'readline';
 import chalk from 'chalk';
@@ -14,8 +16,8 @@ const rl = readline.createInterface({
 console.log(chalk.blue("============================================================"));
 console.log(chalk.blueBright(chalk.bold("                Welcome to json-resumify")));
 console.log(chalk.blue("============================================================"));
-console.log(chalk.yellow("This CLI tool helps you creating your resume in simple steps."));
-console.log(chalk.yellow("Let's do it!"));
+console.log(chalk.yellow("Make an interactive, printable, minimalistic nice looking web resume in seconds!"));
+console.log(chalk.yellow("You will just take care of a single .json file, let json-resumify do the rest."));
 console.log(chalk.yellow("Enter a custom name or press Enter to use the default name."));
 console.log("");
 
@@ -28,6 +30,17 @@ rl.question("Enter the directory name for the project... (json-resumify) ", asyn
   // Construct the Astro command
   const args = `${directoryName} --template basics --typescript strict --no-install --no-git`;
   const astroCommand = `npm create astro@latest -- ${args}`;
+
+  console.log(chalk.yellow("Initializing project..."));
+  try {
+    // Execute Astro command to build the skaffold
+    execSync(astroCommand, { stdio: 'inherit', shell: true });
+    console.log(chalk.green("Project initialized successfully!"));
+    console.log("");
+  } catch (error) {
+    console.error(chalk.red(`Error executing command: ${error.message}`));
+    process.exit(1);
+  }
 
   const filesToModify = [
     { path: path.join(directoryName, 'tsconfig.json'), content: readContentFromFile('tsconfig.json.content')},
@@ -53,17 +66,6 @@ rl.question("Enter the directory name for the project... (json-resumify) ", asyn
   const filesToRemove = [
     { path: path.join(directoryName, 'src', 'components', 'Card.astro') }
   ];
-
-  console.log(chalk.yellow("Initializing project..."));
-  try {
-    // Execute Astro command to build the skaffold
-    execSync(astroCommand, { stdio: 'inherit', shell: true });
-    console.log(chalk.green("Project initialized successfully!"));
-    console.log("");
-  } catch (error) {
-    console.error(chalk.red(`Error executing command: ${error.message}`));
-    process.exit(1);
-  }
 
   console.log(chalk.yellow("Installing packages and generating the template..."));
   try {
@@ -130,10 +132,23 @@ function sanitizeDirectoryName(input) {
   return '';
 }
 
-// Read the content from the .content files
 function readContentFromFile(fileName) {
-  const filePath = path.join('fileContents', fileName);
-  return fs.readFileSync(filePath, 'utf8');
+  // Get the directory path of the current module file
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = path.dirname(__filename);
+
+  // Construct the absolute path to the fileContents directory
+  const fileContentsPath = path.join(__dirname, 'fileContents');
+  // Construct the absolute path to the specific file
+  const filePath = path.join(fileContentsPath, fileName);
+
+  try {
+    // Read the file synchronously and return its content
+    return readFileSync(filePath, 'utf8');
+  } catch (error) {
+    console.error(chalk.red('Error reading file:', error));
+    return null; // Return null or handle the error accordingly
+  }
 }
 
 // Function to recursively traverse directories

@@ -7,9 +7,23 @@
   "bin": {
     "json-resumify": "index.js"
   },
+  "scripts": {},
   "author": "Juan Bocca",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "chalk": "^5.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XorianDev/json-resumify.git"
+  },
+  "keywords": [
+    "resume",
+    "astro",
+    "cli"
+  ],
+  "bugs": {
+    "url": "https://github.com/XorianDev/json-resumify/issues"
+  },
+  "homepage": "https://github.com/XorianDev/json-resumify#readme"
 }
