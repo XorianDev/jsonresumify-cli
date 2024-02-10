@@ -1,11 +1,11 @@
 {
-  "name": "json-resumify",
+  "name": "jsonresumify-cli",
   "version": "1.0.0",
-  "description": "Make an interactive, printable, minimalistic nice looking web resume in seconds! You will just take care of a single .json file, let json-resumify do the rest.",
+  "description": "Make an interactive, printable, minimalistic nice looking web resume in seconds! You will just take care of a single .json file, let jsonresumify-cli do the rest.",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "json-resumify": "index.js"
+    "jsonresumify-cli": "index.js"
   },
   "scripts": {},
   "author": "Juan Bocca",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/XorianDev/json-resumify.git"
+    "url": "git+https://github.com/XorianDev/jsonresumify-cli.git"
   },
   "keywords": [
     "resume",
@@ -23,7 +23,7 @@
     "cli"
   ],
   "bugs": {
-    "url": "https://github.com/XorianDev/json-resumify/issues"
+    "url": "https://github.com/XorianDev/jsonresumify-cli/issues"
   },
-  "homepage": "https://github.com/XorianDev/json-resumify#readme"
+  "homepage": "https://github.com/XorianDev/jsonresumify-cli#readme"
 }

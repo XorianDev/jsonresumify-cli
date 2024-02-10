@@ -14,18 +14,18 @@ const rl = readline.createInterface({
 });
 
 console.log(chalk.blue("============================================================"));
-console.log(chalk.blueBright(chalk.bold("                Welcome to json-resumify")));
+console.log(chalk.blueBright(chalk.bold("                Welcome to jsonresumify-cli")));
 console.log(chalk.blue("============================================================"));
 console.log(chalk.yellow("Make an interactive, printable, minimalistic nice looking web resume in seconds!"));
-console.log(chalk.yellow("You will just take care of a single .json file, let json-resumify do the rest."));
+console.log(chalk.yellow("You will just take care of a single .json file, let jsonresumify-cli do the rest."));
 console.log(chalk.yellow("Enter a custom name or press Enter to use the default name."));
 console.log("");
 
-rl.question("Enter the directory name for the project... (json-resumify) ", async (answer) => {
+rl.question("Enter the directory name for the project... (jsonresumify-cli) ", async (answer) => {
   let  directoryName = answer.trim();
   directoryName = sanitizeDirectoryName(directoryName);
   // Default value in case directory name is empty
-  directoryName = directoryName || 'json-resumify';
+  directoryName = directoryName || 'jsonresumify-cli';
 
   // Construct the Astro command
   const args = `${directoryName} --template basics --typescript strict --no-install --no-git`;
@@ -114,7 +114,7 @@ rl.question("Enter the directory name for the project... (json-resumify) ", asyn
     console.log(chalk.dim("Inspired by MiduDev - https://midu.dev/"));
     console.log("");
     console.log(chalk.blue("============================================================"));
-    console.log(chalk.blue(chalk.bold("      Thanks for using json-resumify, and good luck!")));
+    console.log(chalk.blue(chalk.bold("      Thanks for using jsonresumify-cli, and good luck!")));
     console.log(chalk.blue("============================================================"));
     rl.close();
   }
